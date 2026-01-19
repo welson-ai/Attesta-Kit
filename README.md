@@ -2,7 +2,7 @@
 
 Attesta is an account abstraction protocol implemented on Solana, enabling passkey-based authorization and policy-driven execution while preserving user privacy at the authorization layer.
 
-## 🎯 Overview
+## Overview
 
 Attesta brings WebAuthn/passkey authentication to Solana, allowing users to:
 
