@@ -11,7 +11,7 @@ Attesta brings WebAuthn/passkey authentication to Solana, allowing users to:
 - **Configure policies** - set spending limits, transaction requirements, and recovery options
 - **Social recovery** - use multiple passkeys for account recovery
 
-## 🏗️ Architecture
+## Architecture
 
 Attesta consists of three core components:
 
