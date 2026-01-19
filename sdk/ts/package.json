@@ -1,0 +1,52 @@
+{
+  "name": "@attesta/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Attesta - Account Abstraction on Solana with Passkeys",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
+    "build:cjs": "esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js --external:@solana/web3.js --external:@solana/spl-token --external:@coral-xyz/anchor --external:cbor",
+    "build:esm": "esbuild src/index.ts --bundle --platform=neutral --format=esm --outfile=dist/index.esm.js --external:@solana/web3.js --external:@solana/spl-token --external:@coral-xyz/anchor --external:cbor",
+    "build:umd": "esbuild src/index.ts --bundle --platform=browser --format=iife --global-name=AttestaSDK --outfile=dist/index.umd.js --external:@solana/web3.js --external:@solana/spl-token --external:@coral-xyz/anchor --external:cbor",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "solana",
+    "passkey",
+    "webauthn",
+    "account-abstraction",
+    "blockchain",
+    "crypto"
+  ],
+  "author": "Attesta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/attesta/attesta-solana.git"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9",
+    "@coral-xyz/anchor": "^0.29.0",
+    "cbor": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/cbor": "^5.0.0",
+    "esbuild": "^0.19.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.87.6"
+  }
+}
