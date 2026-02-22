@@ -31,7 +31,7 @@ Attesta consists of three core components:
 - Policy configuration (spending limits, time locks, etc.)
 - Encrypted backup functionality
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 attesta-solana/
@@ -48,7 +48,7 @@ attesta-solana/
 └── docs/                      # Documentation
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -118,7 +118,7 @@ npm install
 npm start
 ```
 
-## 🔐 How It Works
+## How It Works
 
 ### 1. Registration
 
@@ -143,7 +143,7 @@ npm start
 - **Only the signature is sent on-chain** - no fingerprint, face scan, or device info
 - **Replay protection** - each transaction uses a unique nonce
 
-## 📚 API Documentation
+##  API Documentation
 
 ### TypeScript SDK
 
@@ -209,7 +209,7 @@ let account = client.get_account(&account_address)?;
 
 See [sdk/BUNDLING.md](sdk/BUNDLING.md) for bundling details.
 
-## 🛡️ Security Considerations
+## Security Considerations
 
 - **WebAuthn Standard**: Uses FIDO2/WebAuthn for industry-standard security
 - **P-256 Cryptography**: ECDSA with P-256 curve (widely trusted)
@@ -217,7 +217,7 @@ See [sdk/BUNDLING.md](sdk/BUNDLING.md) for bundling details.
 - **Policy Enforcement**: On-chain policies ensure transaction compliance
 - **Privacy First**: No biometric data or device information is ever transmitted
 
-## 🔮 Roadmap
+## Roadmap
 
 - [x] Full Anchor program implementation
 - [x] Deployment scripts and configuration
@@ -228,15 +228,15 @@ See [sdk/BUNDLING.md](sdk/BUNDLING.md) for bundling details.
 - [ ] Mobile SDK (iOS/Android)
 - [ ] Production deployment (ready for mainnet)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Solana Labs for the amazing blockchain platform
 - FIDO Alliance for WebAuthn/FIDO2 standards
